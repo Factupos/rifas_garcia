@@ -1475,18 +1475,20 @@ body.search-has-text #raffles{ display:none !important; }
   mask-size: cover;
   -webkit-mask-size: cover;
 }
-.branch-tap-hand-image{
-  width:100%;
-  height:100%;
+.branch-tap-hand-image {
+  width: 100%;
+  height: 100%;
   object-fit: contain;
-  display:block;
-  opacity:.85;
+  display: block;
+  opacity: .85; /* Se mantiene sutil pero brillante */
+  mix-blend-mode: screen;
   filter:
-    grayscale(0.8)
-    brightness(0.5)
-    contrast(1.2)
-    drop-shadow(0 0 2px rgba(0,0,0,.2));
-  mix-blend-mode: normal;
+    grayscale(1)
+    brightness(1.20)
+    contrast(1.08)
+    saturate(0)
+    drop-shadow(0 0 4px rgba(255,255,255,.12))
+    drop-shadow(0 0 12px rgba(255,109,0,.30)); /* Tono naranja acorde a este theme */
 }
 .branch-tap-press-zone{
   position:absolute;
